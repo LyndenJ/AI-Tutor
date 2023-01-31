@@ -7,13 +7,13 @@ import sys
 import subprocess
 from tempfile import gettempdir
 
-#AWS authentication keys
-aws_access_key_id = "AKIATSLHZI2CX5ZAIWWW"
-aws_secret_access_key = "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"
-aws_session_token = "" #Not needed for IAM users
-region_name = "ca-central-1"
+#AWS authentication keys. You will need to have a AWS account in order to get these
+aws_access_key_id = ""
+aws_secret_access_key = ""
+aws_session_token = "" #Not needed for IAM users which are recommended
+region_name = ""
 botocore_session = ""
-profile_name = "LyndenJones"
+profile_name = ""
 
 
 def textToSpeech(response):
