@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../static/index.css">
+        <h1>AI Tutor</h1>
+    </head>
+    <body style = "background-color: rgb(205, 163, 152);">
+        <form class = "grid" action = "/result" method = "POST">
+            
+            
+            <br>
+            <br>
+            <h2>Lecture section</h2>
+            <h3>Enter topics you would like clarification on</h3>
+
+            
+            <input type="text" name="name" id="name" placeholder="Enter topic of study:">
+
+            <input type = "Submit" class = "file_submit">
+            <br>
+            <br
+            <center>
+                {% if name %}
+                <p style="color: blue; font-size: 30px;">{{name}}</p>
+
+                <!-- <audio controls>
+                    <source src = "../audio/This that and the other thing. Lecture section.mp3" type="audio/mp3">
+                </audio> -->
+
+                {% endif %}
+
+
+            </center>
+
+            <br>
+            <br>
+
+        </form>
+        <form class = "grid" action = "/result" method = "POST">
+            <h2>Practice Section</h2>
+            <h3>Set your course name and click "Generate" and we'll generate a practice problem for you.</h3>
+            <br>
+            <br>
+            
+            <input list="practice" id="practice" name="practice" placeholder="Course Name:"/>
+            <datalist id="practice">
+                <option value="Intro to Economics"></option>
+                <option value="Python Programming"></option>
+                <option value="Calculus"></option>
+                <option value="Kinematics"></option>
+                <option value="Statistics"></option>
+            </datalist>
+            <input type="submit" value="Generate">
+
+            <br><br>
+
+            <center>
+                {% if practice %}
+                <p style="color: blue; font-size: 30px;">{{question}}</p>
+                <br><br>
+                <p style="color: blue; font-size: 30px;">{{solution}}</p>
+
+                {% endif %}
+
+            </center>
+
+        </form>
+    </body>
+</html>

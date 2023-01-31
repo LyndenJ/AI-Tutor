@@ -1,0 +1,19 @@
+#name
+{
+    height:75px;
+    width: 350px;
+    font-size:14pt;
+}
+
+#practice
+{
+    height:75px;
+    width: 350px;
+    font-size:14pt;
+}
+
+input {
+    padding-top: 0;
+    padding-left: 0;
+    line-height: 1em;
+ }
